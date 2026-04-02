@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "title": "Sorrento Residence",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600",
+    "aspect": "3/4",
+    "showOnHome": true,
+    "galleryImages": []
+  },
+  {
+    "id": "2",
+    "title": "Toorak Estate",
+    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1600",
+    "aspect": "1/1",
+    "showOnHome": true
+  },
+  {
+    "id": "3",
+    "title": "Armadale Gallery",
+    "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1600",
+    "aspect": "16/9",
+    "showOnHome": true,
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1600",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1600",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1600"
+    ]
+  }
+]

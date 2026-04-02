@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-parchment: #EAE8E4;
+  --color-linen: #DAD0C5;
+  --color-plaster: #C9BCB1;
+  --color-stone: #B9AC9F;
+  --color-bark: #96836D;
+  --color-soil: #7A6750;
+  --color-espresso: #5B4834;
+  --color-charcoal: #3A2A1F;
+  --color-slate: #94A1B9;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-parchment: var(--color-parchment);
+  --color-linen: var(--color-linen);
+  --color-plaster: var(--color-plaster);
+  --color-stone: var(--color-stone);
+  --color-bark: var(--color-bark);
+  --color-soil: var(--color-soil);
+  --color-espresso: var(--color-espresso);
+  --color-charcoal: var(--color-charcoal);
+  --color-slate: var(--color-slate);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: "futura-pt", sans-serif;
+  --font-serif: "futura-pt", sans-serif;
+  --font-futura: "futura-pt", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-parchment);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base styles for Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
