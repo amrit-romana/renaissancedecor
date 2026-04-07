@@ -25,9 +25,9 @@ export function Preloader() {
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center pointer-events-none"
         >
-          {/* Background Layer (Fades at stage 1) using precisely #2B0607 as requested */}
+          {/* Background Layer (Fades at stage 1) using precisely #3A2A1F as requested */}
           <motion.div 
-            className="absolute inset-0 bg-[#2B0607]"
+            className="absolute inset-0 bg-[#3A2A1F]"
             initial={{ opacity: 1 }}
             animate={{ opacity: stage === 1 ? 0 : 1 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}

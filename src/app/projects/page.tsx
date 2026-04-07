@@ -32,7 +32,7 @@ export default async function ProjectsPage() {
               className="w-full break-inside-avoid mb-10 md:mb-16 group cursor-pointer flex flex-col gap-3 md:gap-4 block"
             >
               <div
-                className="relative w-full overflow-hidden bg-[#2B0607] aspect-[4/5]"
+                className="relative w-full overflow-hidden bg-[#3A2A1F] aspect-[4/5]"
               >
                 <Image
                   src={project.image}

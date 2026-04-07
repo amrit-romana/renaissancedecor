@@ -12,12 +12,12 @@ export default function AboutPage() {
       <section className="pt-48 pb-24 px-6 md:px-12 w-full max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 overflow-hidden">
         <div className="lg:col-span-5 flex flex-col gap-12">
           <FadeIn delay={0.1} direction="up" duration={1.2}>
-            <h1 className="font-futura font-light text-5xl md:text-6xl text-[#2B0607] tracking-widest uppercase">
+            <h1 className="font-futura font-light text-5xl md:text-6xl text-[#3A2A1F] tracking-widest uppercase">
               Who We Are
             </h1>
           </FadeIn>
           
-          <div className="flex flex-col gap-6 font-sans text-sm md:text-base text-[#2B0607]/80 leading-loose">
+          <div className="flex flex-col gap-6 font-sans text-sm md:text-base text-[#3A2A1F]/80 leading-loose">
             <FadeIn delay={0.2} direction="up">
               <p>
                 Award winning Venetian Plaster applicators, offering a limitless range of Venetian Plasters and Special Finishes. With over 20 years of international experience, Renaissance Decor prides itself on integrity, efficiency, and uncompromising quality.
@@ -32,10 +32,10 @@ export default function AboutPage() {
 
           <FadeIn delay={0.4} direction="up">
             <div className="mt-8 flex flex-col gap-6">
-              <h3 className="font-futura font-bold text-lg text-[#2B0607] uppercase tracking-widest">
+              <h3 className="font-futura font-bold text-lg text-[#3A2A1F] uppercase tracking-widest">
                 Awards & Accolades
               </h3>
-              <ul className="flex flex-col gap-3 font-sans text-xs md:text-sm text-[#2B0607]/70 font-medium">
+              <ul className="flex flex-col gap-3 font-sans text-xs md:text-sm text-[#3A2A1F]/70 font-medium">
                  <li>2024 - Master Artisans Excellence</li>
                  <li>2023 - Certified Venetian Applicators</li>
                  <li>2022 - House & Garden Feature</li>
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. About Adam (Dark Section) */}
-      <section className="py-32 px-6 md:px-12 w-full bg-[#2B0607] text-[var(--color-parchment)] overflow-hidden">
+      <section className="py-32 px-6 md:px-12 w-full bg-[#3A2A1F] text-[var(--color-parchment)] overflow-hidden">
         <div className="max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           <div className="lg:col-span-5">
             <FadeIn delay={0.1} direction="right">
@@ -119,13 +119,13 @@ export default function AboutPage() {
       {/* 3. How We Work Timeline */}
       <section className="py-32 px-6 md:px-12 w-full max-w-[1400px] mx-auto flex flex-col relative overflow-hidden">
         <FadeIn direction="up" duration={1.2}>
-          <h2 className="text-center font-futura font-light text-4xl md:text-5xl text-[#2B0607] tracking-widest uppercase mb-32">
+          <h2 className="text-center font-futura font-light text-4xl md:text-5xl text-[#3A2A1F] tracking-widest uppercase mb-32">
             How We Work
           </h2>
         </FadeIn>
         
         {/* Absolute vertical line */}
-        <div className="absolute left-1/2 top-48 bottom-0 w-[1px] bg-[#2B0607]/20 hidden md:block transform -translate-x-1/2" />
+        <div className="absolute left-1/2 top-48 bottom-0 w-[1px] bg-[#3A2A1F]/20 hidden md:block transform -translate-x-1/2" />
         
         <div className="flex flex-col gap-32">
           {/* Step 01 */}
@@ -138,13 +138,13 @@ export default function AboutPage() {
               </FadeIn>
             </div>
             
-            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2B0607]" />
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#3A2A1F]" />
             
             <div className="md:w-1/2 flex flex-col gap-4 md:pl-24 mt-8 md:mt-0 w-full">
               <FadeIn delay={0.2} direction="up">
-                <span className="font-serif text-6xl text-[#2B0607]/20">01</span>
-                <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#2B0607] mt-4">Consultation</h3>
-                <p className="font-sans text-sm text-[#2B0607]/80 leading-loose max-w-sm mt-4">We begin by understanding your architectural vision, assessing the lighting, spatial parameters, and functional requirements of your site.</p>
+                <span className="font-serif text-6xl text-[#3A2A1F]/20">01</span>
+                <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#3A2A1F] mt-4">Consultation</h3>
+                <p className="font-sans text-sm text-[#3A2A1F]/80 leading-loose max-w-sm mt-4">We begin by understanding your architectural vision, assessing the lighting, spatial parameters, and functional requirements of your site.</p>
               </FadeIn>
             </div>
           </div>
@@ -159,13 +159,13 @@ export default function AboutPage() {
               </FadeIn>
             </div>
             
-            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2B0607]" />
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#3A2A1F]" />
             
             <div className="md:w-1/2 flex flex-col gap-4 md:pr-24 items-start md:items-end text-left flex-end md:text-right mt-8 md:mt-0 w-full">
               <FadeIn delay={0.2} direction="up" className="flex flex-col items-start md:items-end w-full">
-                <span className="font-serif text-6xl text-[#2B0607]/20">02</span>
-                <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#2B0607] mt-4">Prototyping</h3>
-                <p className="font-sans text-sm text-[#2B0607]/80 leading-loose max-w-sm mt-4">Bespoke sample boards are crafted to allow you to experience the texture, color depth, and light interplay before full application.</p>
+                <span className="font-serif text-6xl text-[#3A2A1F]/20">02</span>
+                <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#3A2A1F] mt-4">Prototyping</h3>
+                <p className="font-sans text-sm text-[#3A2A1F]/80 leading-loose max-w-sm mt-4">Bespoke sample boards are crafted to allow you to experience the texture, color depth, and light interplay before full application.</p>
               </FadeIn>
             </div>
           </div>
@@ -180,13 +180,13 @@ export default function AboutPage() {
               </FadeIn>
             </div>
             
-            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2B0607]" />
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#3A2A1F]" />
             
             <div className="md:w-1/2 flex flex-col gap-4 md:pl-24 mt-8 md:mt-0 w-full">
                <FadeIn delay={0.2} direction="up">
-                  <span className="font-serif text-6xl text-[#2B0607]/20">03</span>
-                  <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#2B0607] mt-4">Execution</h3>
-                  <p className="font-sans text-sm text-[#2B0607]/80 leading-loose max-w-sm mt-4">Our master artisans meticulously apply the compounds on-site, layering the Venetian plaster strictly by hand to achieve organic motion.</p>
+                  <span className="font-serif text-6xl text-[#3A2A1F]/20">03</span>
+                  <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#3A2A1F] mt-4">Execution</h3>
+                  <p className="font-sans text-sm text-[#3A2A1F]/80 leading-loose max-w-sm mt-4">Our master artisans meticulously apply the compounds on-site, layering the Venetian plaster strictly by hand to achieve organic motion.</p>
                </FadeIn>
             </div>
           </div>
@@ -194,9 +194,9 @@ export default function AboutPage() {
       </section>
 
       {/* 4. You May Also Like / Featured Grids */}
-      <section className="py-24 px-6 md:px-12 w-full max-w-[1600px] mx-auto border-t border-[#2B0607]/10">
+      <section className="py-24 px-6 md:px-12 w-full max-w-[1600px] mx-auto border-t border-[#3A2A1F]/10">
         <FadeIn direction="up">
-          <h2 className="text-center font-futura font-light text-2xl md:text-3xl text-[#2B0607] tracking-widest uppercase mb-16">
+          <h2 className="text-center font-futura font-light text-2xl md:text-3xl text-[#3A2A1F] tracking-widest uppercase mb-16">
             Featured Projects
           </h2>
         </FadeIn>
@@ -207,7 +207,7 @@ export default function AboutPage() {
                <div className="relative w-full aspect-[4/5] overflow-hidden bg-stone-200">
                  <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/chandelier-living-room.jpg" alt="Living" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                </div>
-               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#2B0607]">High-End Living</p>
+               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#3A2A1F]">High-End Living</p>
             </Link>
           </FadeIn>
           <FadeIn delay={0.3} direction="up">
@@ -215,7 +215,7 @@ export default function AboutPage() {
                <div className="relative w-full aspect-[4/5] overflow-hidden bg-stone-200">
                  <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/RD_11_Struan-Sofa.jpg" alt="Wet Areas" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                </div>
-               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#2B0607]">Minimalist Textures</p>
+               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#3A2A1F]">Minimalist Textures</p>
             </Link>
           </FadeIn>
           <FadeIn delay={0.5} direction="up">
@@ -223,7 +223,7 @@ export default function AboutPage() {
                <div className="relative w-full aspect-[4/5] overflow-hidden bg-stone-200">
                  <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/RenaissanceDecor-024.jpg" alt="Commercial" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                </div>
-               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#2B0607]">Commercial Venues</p>
+               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#3A2A1F]">Commercial Venues</p>
             </Link>
           </FadeIn>
         </div>

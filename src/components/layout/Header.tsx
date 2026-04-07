@@ -99,7 +99,7 @@ export function Header({ theme = "light" }: { theme?: "light" | "dark" }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-50 bg-[#2B0607] flex flex-col items-center justify-center"
+            className="fixed inset-0 z-50 bg-[#3A2A1F] flex flex-col items-center justify-center"
           >
             <button
               onClick={() => setMenuOpen(false)}

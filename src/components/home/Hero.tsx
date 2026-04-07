@@ -34,7 +34,7 @@ export function Hero() {
   const prevImage = () => setIndex((prev) => (prev - 1 + HERO_IMAGES.length) % HERO_IMAGES.length);
 
   return (
-    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-[#2B0607] group">
+    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-[#3A2A1F] group">
       <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
         <AnimatePresence initial={false}>
           <motion.div
