@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 const TESTIMONIALS = [
   {
@@ -27,10 +28,10 @@ export function TestimonialSection() {
   const prevTestimonial = () => setIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
 
   return (
-    <section className="w-full bg-[var(--color-charcoal)] text-[var(--color-parchment)] py-20 md:py-32 px-6 md:px-12 flex flex-col items-center justify-center relative overflow-hidden group">
+    <section className="w-full bg-[#2B0607] text-[var(--color-parchment)] py-32 md:py-48 px-6 md:px-12 flex flex-col items-center justify-center relative overflow-hidden group">
       
-      <div className="max-w-4xl w-full text-center flex flex-col items-center gap-8 relative z-10 min-h-[300px] justify-center">
-        <span className="font-serif text-5xl md:text-7xl leading-none opacity-40 absolute -top-8 left-1/2 -translate-x-1/2">“</span>
+      <FadeIn direction="up" className="max-w-4xl w-full text-center flex flex-col items-center gap-8 relative z-10 min-h-[300px] justify-center">
+        <span className="font-serif text-5xl md:text-7xl leading-none opacity-40 absolute -top-12 left-1/2 -translate-x-1/2">“</span>
         
         <AnimatePresence mode="wait">
           <motion.div
@@ -62,10 +63,10 @@ export function TestimonialSection() {
             </div>
           </motion.div>
         </AnimatePresence>
-      </div>
+      </FadeIn>
 
       {/* Pagination indicators */}
-      <div className="flex gap-2 mt-12 z-20">
+      <FadeIn direction="up" delay={0.4} className="flex gap-2 mt-12 z-20">
         {TESTIMONIALS.map((_, i) => (
           <button 
             key={i} 
@@ -74,7 +75,7 @@ export function TestimonialSection() {
             aria-label={`Go to testimonial ${i + 1}`}
           />
         ))}
-      </div>
+      </FadeIn>
     </section>
   );
 }

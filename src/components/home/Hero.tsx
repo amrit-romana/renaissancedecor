@@ -34,7 +34,7 @@ export function Hero() {
   const prevImage = () => setIndex((prev) => (prev - 1 + HERO_IMAGES.length) % HERO_IMAGES.length);
 
   return (
-    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-[var(--color-charcoal)] group">
+    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-[#2B0607] group">
       <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
         <AnimatePresence initial={false}>
           <motion.div
@@ -64,10 +64,10 @@ export function Hero() {
         className="absolute inset-0 flex flex-col justify-end px-6 py-12 md:px-12 md:py-16 text-[var(--color-parchment)] z-10 pointer-events-none"
       >
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.5 }}
-          className="font-serif text-4xl md:text-5xl lg:text-[64px] leading-[1.15] tracking-[80px] w-full max-w-4xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 2.5 }}
+          className="font-serif text-4xl md:text-5xl lg:text-[64px] leading-[1.15] w-full max-w-4xl"
           style={{ letterSpacing: '0.04em' }}
         >
           Twenty Years.<br/>Every surface applied by hand.

@@ -39,7 +39,7 @@ export default function ShopPage() {
   return (
     <main className="flex flex-col min-h-screen bg-[var(--color-parchment)]">
       <Header theme="dark" />
-      
+
       <section className="pt-48 pb-12 px-6 md:px-12 w-full flex flex-col items-center">
         <h1 className="font-futura font-light text-4xl md:text-5xl lg:text-6xl text-[var(--color-charcoal)] tracking-widest uppercase mb-6 md:mb-12">
           Products
@@ -53,14 +53,14 @@ export default function ShopPage() {
       <section className="w-full max-w-[1200px] mx-auto px-6 md:px-12 pb-32">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
           {productCategories.map((category, idx) => (
-            <a 
-              key={idx} 
+            <a
+              key={idx}
               href={category.url}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex flex-col gap-3 group"
             >
-              <div 
+              <div
                 className="relative w-full aspect-square bg-[var(--color-stone)] overflow-hidden"
               >
                 <Image
@@ -79,9 +79,9 @@ export default function ShopPage() {
             </a>
           ))}
         </div>
-        
+
         <div className="flex justify-center mt-20">
-          <a 
+          <a
             href="https://lustrefx.com.au/products/"
             target="_blank"
             rel="noopener noreferrer"

@@ -25,28 +25,45 @@ export function Preloader() {
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center pointer-events-none"
         >
-          {/* Background Layer (Fades at stage 1) */}
+          {/* Background Layer (Fades at stage 1) using precisely #2B0607 as requested */}
           <motion.div 
-            className="absolute inset-0 bg-[var(--color-charcoal)]"
+            className="absolute inset-0 bg-[#2B0607]"
             initial={{ opacity: 1 }}
             animate={{ opacity: stage === 1 ? 0 : 1 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
           />
           
-          {/* Content Layer (Exits at stage 2) */}
+          {/* Content Layer (Exits at stage 2) - Fades in slowly like HFL */}
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
-            className="relative z-10 w-64 h-24 md:w-96 md:h-32"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative z-10 flex flex-col items-center justify-center gap-8 md:gap-12"
           >
-            <Image
-              src="/images/logo-light.png"
-              alt="Renaissance Decor Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="relative w-36 h-36 md:w-56 md:h-56 mb-4 md:mb-6"
+            >
+              <Image
+                src="/images/crest-white.png"
+                alt="Renaissance Decor Emblem"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
+            
+            <div className="overflow-hidden">
+              <motion.h1 
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.0, delay: 0.8, ease: [0.33, 1, 0.68, 1] }}
+                className="font-sans text-xs md:text-sm lg:text-base text-[var(--color-parchment)] tracking-[0.4em] md:tracking-[0.5em] uppercase font-bold text-center"
+              >
+                RENAISSANCE DECOR
+              </motion.h1>
+            </div>
           </motion.div>
         </motion.div>
       )}

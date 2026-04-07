@@ -5,20 +5,18 @@ import Link from "next/link";
 
 export default async function ProjectsPage() {
   const allProjects = await getProjects();
-  
+
   // Create an artificial larger array for a staggered gallery effect if needed, 
   // or simply map the existing projects into a 3-column classic masonry.
   // HFL Interiors uses a distinct, slightly asymmetrical 3-column masonry with varied image ratios.
-  
+
   return (
     <main className="flex flex-col min-h-screen bg-[var(--color-parchment)]">
       <Header theme="dark" />
-      
+
       <section className="pt-48 pb-12 px-6 md:px-12 w-full flex flex-col items-center">
-        <h1 className="font-futura font-light text-4xl md:text-5xl lg:text-6xl text-[var(--color-charcoal)] tracking-widest uppercase mb-12">
-          Projects
-        </h1>
-        
+
+
         <p className="font-futura text-sm md:text-base text-center max-w-2xl text-[var(--color-charcoal)]/70 leading-relaxed mb-24 font-light">
           A selection of our commissioned architectural finishes, spanning private residences, commercial spaces, and luxury retail across Melbourne and internationally.
         </p>
@@ -28,13 +26,13 @@ export default async function ProjectsPage() {
       <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pb-32">
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 md:gap-8">
           {allProjects.map((project, idx) => (
-            <Link 
-              key={idx} 
+            <Link
+              key={idx}
               href={`/projects/${project.id}`}
               className="w-full break-inside-avoid mb-10 md:mb-16 group cursor-pointer flex flex-col gap-3 md:gap-4 block"
             >
-              <div 
-                className="relative w-full overflow-hidden bg-[var(--color-charcoal)] aspect-[4/5]"
+              <div
+                className="relative w-full overflow-hidden bg-[#2B0607] aspect-[4/5]"
               >
                 <Image
                   src={project.image}

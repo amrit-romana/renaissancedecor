@@ -1,0 +1,234 @@
+import { Header } from "@/components/layout/Header";
+import { FadeIn } from "@/components/ui/FadeIn";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function AboutPage() {
+  return (
+    <main className="flex flex-col min-h-screen bg-[var(--color-parchment)]">
+      <Header theme="dark" />
+      
+      {/* 1. Foundation & Accolades */}
+      <section className="pt-48 pb-24 px-6 md:px-12 w-full max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 overflow-hidden">
+        <div className="lg:col-span-5 flex flex-col gap-12">
+          <FadeIn delay={0.1} direction="up" duration={1.2}>
+            <h1 className="font-futura font-light text-5xl md:text-6xl text-[#2B0607] tracking-widest uppercase">
+              Who We Are
+            </h1>
+          </FadeIn>
+          
+          <div className="flex flex-col gap-6 font-sans text-sm md:text-base text-[#2B0607]/80 leading-loose">
+            <FadeIn delay={0.2} direction="up">
+              <p>
+                Award winning Venetian Plaster applicators, offering a limitless range of Venetian Plasters and Special Finishes. With over 20 years of international experience, Renaissance Decor prides itself on integrity, efficiency, and uncompromising quality.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.3} direction="up">
+              <p>
+                We specialize in bringing the timeless elegance of traditional European plastering techniques directly to modern Australian architecture. Our master artisans merge heritage craftsmanship with contemporary innovation to produce surfaces that are structurally poetic.
+              </p>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.4} direction="up">
+            <div className="mt-8 flex flex-col gap-6">
+              <h3 className="font-futura font-bold text-lg text-[#2B0607] uppercase tracking-widest">
+                Awards & Accolades
+              </h3>
+              <ul className="flex flex-col gap-3 font-sans text-xs md:text-sm text-[#2B0607]/70 font-medium">
+                 <li>2024 - Master Artisans Excellence</li>
+                 <li>2023 - Certified Venetian Applicators</li>
+                 <li>2022 - House & Garden Feature</li>
+                 <li>2020 - European Heritage Award</li>
+              </ul>
+            </div>
+          </FadeIn>
+        </div>
+        
+        <div className="lg:col-span-7 flex flex-col justify-center">
+          <FadeIn delay={0.5} direction="left" className="w-full">
+            <div className="relative w-full aspect-[4/3] bg-stone-200">
+              <Image 
+                src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/RD_11_Struan-Kitchen.jpg" 
+                alt="Renaissance Decor Application" 
+                fill 
+                className="object-cover"
+              />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 2. About Adam (Dark Section) */}
+      <section className="py-32 px-6 md:px-12 w-full bg-[#2B0607] text-[var(--color-parchment)] overflow-hidden">
+        <div className="max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+          <div className="lg:col-span-5">
+            <FadeIn delay={0.1} direction="right">
+              <div className="relative w-full aspect-[3/4] bg-stone-900 border border-[var(--color-parchment)]/10">
+                <Image 
+                  src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/Adam-McCann.jpg" 
+                  alt="Adam McCann" 
+                  fill 
+                  className="object-cover filter grayscale contrast-125 brightness-90"
+                />
+              </div>
+            </FadeIn>
+          </div>
+          
+          <div className="lg:col-span-7 flex flex-col gap-12 lg:pl-12">
+            <FadeIn delay={0.2} direction="up" duration={1.2}>
+              <h2 className="font-futura font-light text-4xl md:text-5xl tracking-widest uppercase">
+                About Adam
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.3} direction="up">
+              <p className="font-serif italic text-3xl md:text-4xl leading-snug">
+                "Every surface is a canvas, and our heritage is simply knowing how to let the architecture speak."
+              </p>
+            </FadeIn>
+            
+            <FadeIn delay={0.4} direction="up">
+              <div className="flex flex-col gap-6 font-sans text-sm md:text-base text-[var(--color-parchment)]/80 leading-loose max-w-xl">
+                <p>
+                  As the Director of Renaissance Decor, Adam McCann brings decades of passion, technical discipline, and an unrivaled eye for structural finishing. He has dedicated his career to sourcing the most authentic plastering compounds globally, ensuring every project holds a distinct narrative.
+                </p>
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.5} direction="up">
+              <div className="mt-8">
+                <h3 className="font-futura font-bold text-lg uppercase tracking-widest mb-6">
+                  Meet the Team
+                </h3>
+                <ul className="flex flex-col gap-2 font-sans text-sm text-[var(--color-parchment)]/70 max-w-md">
+                  <li className="grid grid-cols-[1fr_2fr] border-b border-[var(--color-parchment)]/20 pb-3">
+                    <span className="font-bold text-[var(--color-parchment)] tracking-wide">Adam McCann</span>
+                    <span>Director / Sales</span>
+                  </li>
+                  <li className="grid grid-cols-[1fr_2fr] border-b border-[var(--color-parchment)]/20 pb-3 pt-3">
+                    <span className="font-bold text-[var(--color-parchment)] tracking-wide">Master Artisans</span>
+                    <span>Certified Venetian Applicators</span>
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. How We Work Timeline */}
+      <section className="py-32 px-6 md:px-12 w-full max-w-[1400px] mx-auto flex flex-col relative overflow-hidden">
+        <FadeIn direction="up" duration={1.2}>
+          <h2 className="text-center font-futura font-light text-4xl md:text-5xl text-[#2B0607] tracking-widest uppercase mb-32">
+            How We Work
+          </h2>
+        </FadeIn>
+        
+        {/* Absolute vertical line */}
+        <div className="absolute left-1/2 top-48 bottom-0 w-[1px] bg-[#2B0607]/20 hidden md:block transform -translate-x-1/2" />
+        
+        <div className="flex flex-col gap-32">
+          {/* Step 01 */}
+          <div className="flex flex-col md:flex-row items-center w-full relative z-10 w-full justify-between">
+            <div className="md:w-1/2 flex justify-end md:pr-24 w-full">
+              <FadeIn direction="right" className="w-full max-w-[400px]">
+                <div className="relative w-full aspect-[4/5] bg-stone-200">
+                  <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/corridor.jpg" alt="Consultation" fill className="object-cover" />
+                </div>
+              </FadeIn>
+            </div>
+            
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2B0607]" />
+            
+            <div className="md:w-1/2 flex flex-col gap-4 md:pl-24 mt-8 md:mt-0 w-full">
+              <FadeIn delay={0.2} direction="up">
+                <span className="font-serif text-6xl text-[#2B0607]/20">01</span>
+                <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#2B0607] mt-4">Consultation</h3>
+                <p className="font-sans text-sm text-[#2B0607]/80 leading-loose max-w-sm mt-4">We begin by understanding your architectural vision, assessing the lighting, spatial parameters, and functional requirements of your site.</p>
+              </FadeIn>
+            </div>
+          </div>
+
+          {/* Step 02 */}
+          <div className="flex flex-col md:flex-row-reverse items-center w-full relative z-10 justify-between">
+            <div className="md:w-1/2 flex justify-start md:pl-24 w-full">
+              <FadeIn direction="left" className="w-full max-w-[400px]">
+                <div className="relative w-full aspect-[4/3] bg-stone-200">
+                  <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/stairs-white.jpg" alt="Sampling" fill className="object-cover" />
+                </div>
+              </FadeIn>
+            </div>
+            
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2B0607]" />
+            
+            <div className="md:w-1/2 flex flex-col gap-4 md:pr-24 items-start md:items-end text-left flex-end md:text-right mt-8 md:mt-0 w-full">
+              <FadeIn delay={0.2} direction="up" className="flex flex-col items-start md:items-end w-full">
+                <span className="font-serif text-6xl text-[#2B0607]/20">02</span>
+                <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#2B0607] mt-4">Prototyping</h3>
+                <p className="font-sans text-sm text-[#2B0607]/80 leading-loose max-w-sm mt-4">Bespoke sample boards are crafted to allow you to experience the texture, color depth, and light interplay before full application.</p>
+              </FadeIn>
+            </div>
+          </div>
+
+          {/* Step 03 */}
+          <div className="flex flex-col md:flex-row items-center w-full relative z-10 justify-between">
+            <div className="md:w-1/2 flex justify-end md:pr-24 w-full">
+              <FadeIn direction="right" className="w-full max-w-[400px]">
+                <div className="relative w-full aspect-[4/5] bg-stone-200">
+                  <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/RenaissanceDecor-009.jpg" alt="Application" fill className="object-cover" />
+                </div>
+              </FadeIn>
+            </div>
+            
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#2B0607]" />
+            
+            <div className="md:w-1/2 flex flex-col gap-4 md:pl-24 mt-8 md:mt-0 w-full">
+               <FadeIn delay={0.2} direction="up">
+                  <span className="font-serif text-6xl text-[#2B0607]/20">03</span>
+                  <h3 className="font-futura font-bold text-xl uppercase tracking-widest text-[#2B0607] mt-4">Execution</h3>
+                  <p className="font-sans text-sm text-[#2B0607]/80 leading-loose max-w-sm mt-4">Our master artisans meticulously apply the compounds on-site, layering the Venetian plaster strictly by hand to achieve organic motion.</p>
+               </FadeIn>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. You May Also Like / Featured Grids */}
+      <section className="py-24 px-6 md:px-12 w-full max-w-[1600px] mx-auto border-t border-[#2B0607]/10">
+        <FadeIn direction="up">
+          <h2 className="text-center font-futura font-light text-2xl md:text-3xl text-[#2B0607] tracking-widest uppercase mb-16">
+            Featured Projects
+          </h2>
+        </FadeIn>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FadeIn delay={0.1} direction="up">
+            <Link href="/projects/living" className="group flex flex-col gap-4 relative">
+               <div className="relative w-full aspect-[4/5] overflow-hidden bg-stone-200">
+                 <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/chandelier-living-room.jpg" alt="Living" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+               </div>
+               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#2B0607]">High-End Living</p>
+            </Link>
+          </FadeIn>
+          <FadeIn delay={0.3} direction="up">
+            <Link href="/projects/wet-areas" className="group flex flex-col gap-4 relative">
+               <div className="relative w-full aspect-[4/5] overflow-hidden bg-stone-200">
+                 <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/RD_11_Struan-Sofa.jpg" alt="Wet Areas" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+               </div>
+               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#2B0607]">Minimalist Textures</p>
+            </Link>
+          </FadeIn>
+          <FadeIn delay={0.5} direction="up">
+            <Link href="/projects/commercial" className="group flex flex-col gap-4 relative">
+               <div className="relative w-full aspect-[4/5] overflow-hidden bg-stone-200">
+                 <Image src="https://renaissancedecor.com.au/wp-content/uploads/2023/07/RenaissanceDecor-024.jpg" alt="Commercial" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+               </div>
+               <p className="text-center font-futura uppercase tracking-widest text-xs font-bold text-[#2B0607]">Commercial Venues</p>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+      
+    </main>
+  );
+}

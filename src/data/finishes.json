@@ -1,32 +1,11 @@
 [
-  {
-    "id": "1",
-    "name": "Polished Plasters",
-    "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=800",
-    "showOnHome": true
-  },
-  {
-    "id": "2",
-    "name": "Textured",
-    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800",
-    "showOnHome": true
-  },
-  {
-    "id": "3",
-    "name": "Concrete",
-    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800",
-    "showOnHome": true
-  },
-  {
-    "id": "4",
-    "name": "Microcement",
-    "image": "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800",
-    "showOnHome": true
-  },
-  {
-    "id": "5",
-    "name": "Tadelakt",
-    "image": "https://images.unsplash.com/photo-1598928308472-c2eebc03b10b?q=80&w=800",
-    "showOnHome": false
-  }
+  { "id": "f1", "name": "Polished Plaster", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/polished-plaster-mega-menu.jpg", "showOnHome": true },
+  { "id": "f2", "name": "Textured", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/textured-mega-menu.jpg", "showOnHome": true },
+  { "id": "f3", "name": "Concrete", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/concrete-mega-menu.jpg", "showOnHome": true },
+  { "id": "f4", "name": "Oxidation", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/oxidation-mega-menu.jpg", "showOnHome": true },
+  { "id": "f5", "name": "Metal Coatings", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/metal-coatings-mega-menu.jpg", "showOnHome": true },
+  { "id": "f6", "name": "Tadelakt", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/tadelakt-mega-menu.jpg", "showOnHome": true },
+  { "id": "f7", "name": "Clay Plaster", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/clay-plaster-mega-menu.jpg", "showOnHome": false },
+  { "id": "f8", "name": "Flooring", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/flooring-mega-menu.jpg", "showOnHome": false },
+  { "id": "f9", "name": "Microcement", "image": "https://renaissancedecor.com.au/wp-content/uploads/2023/08/microcement-mega-menu.jpg", "showOnHome": false }
 ]

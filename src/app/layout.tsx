@@ -3,6 +3,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { Preloader } from "@/components/layout/Preloader";
 import { Footer } from "@/components/layout/Footer";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Renaissance Decor | Master Artisans of Surface Design",
@@ -21,6 +22,7 @@ export default function RootLayout({
       </head>
       <body className={`font-futura antialiased selection:bg-[var(--color-stone)] selection:text-[var(--color-charcoal)]`}>
         <SmoothScroll>
+          <CustomCursor />
           <Preloader />
           {children}
           <Footer />

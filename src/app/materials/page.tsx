@@ -1,40 +1,51 @@
-"use client";
 import { Header } from "@/components/layout/Header";
-import dynamic from "next/dynamic";
+import { getFinishes } from "@/actions/finishes";
+import Image from "next/image";
+import Link from "next/link";
 
-// Lazy load the heavy 3D scene directly aligned with the requirement
-const Materials3DScene = dynamic(() => import("@/components/materials/Materials3DScene"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-[var(--color-parchment)] absolute top-0 left-0 z-0">
-      <div className="w-16 h-[1px] bg-[var(--color-charcoal)]/20 overflow-hidden mb-4">
-        <div className="w-full h-full bg-[var(--color-charcoal)] origin-left animate-pulse" />
-      </div>
-      <span className="font-sans text-[9px] tracking-[0.2em] font-light uppercase text-[var(--color-charcoal)]">
-        Loading Material...
-      </span>
-    </div>
-  )
-});
+export default async function MaterialsPage() {
+  const finishes = await getFinishes();
 
-export default function MaterialsPage() {
   return (
-    <main className="flex flex-col min-h-screen bg-[var(--color-parchment)] relative overflow-hidden">
-      <Header />
+    <main className="flex flex-col min-h-screen bg-[var(--color-parchment)]">
+      <Header theme="dark" />
       
-      {/* Foreground Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen pointer-events-none px-6 text-center select-none">
-        <h1 className="font-serif text-5xl md:text-7xl text-[var(--color-charcoal)] tracking-wide">
-          Tactile Depth
+      <section className="pt-48 pb-12 px-6 md:px-12 w-full flex flex-col items-center">
+        <h1 className="font-futura font-light text-4xl md:text-5xl lg:text-6xl text-[#2B0607] tracking-widest uppercase mb-12">
+          Finishes
         </h1>
-        <p className="font-sans text-[10px] md:text-xs tracking-[0.25em] font-light uppercase mt-6 text-[var(--color-charcoal)]/70">
-          Interact to explore the burnish
+        <p className="font-futura text-sm md:text-base text-center max-w-2xl text-[#2B0607]/70 leading-relaxed mb-24 font-light">
+          Choose from our extensive range of Finishes, or alternatively we can create custom finishes to suit your requirements. For bespoke finishes please contact us and provide images and details from which sample boards can be created.
         </p>
-      </div>
+      </section>
 
-      {/* 3D Canvas Background */}
-      <Materials3DScene />
-      
+      {/* Grid of Finishes */}
+      <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          {finishes.map((finish, idx) => (
+            <Link
+              key={finish.id}
+              href="/contact"
+              className="group cursor-pointer flex flex-col gap-6"
+            >
+              <div className="relative w-full overflow-hidden bg-[var(--color-stone)] aspect-[4/5]">
+                <Image
+                  src={finish.image}
+                  alt={finish.name}
+                  fill
+                  className="object-cover object-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="flex flex-col text-center">
+                <span className="font-futura font-bold text-sm md:text-base text-[#2B0607] uppercase tracking-[0.2em]">
+                  {finish.name}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

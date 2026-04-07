@@ -23,9 +23,9 @@
   --color-charcoal: var(--color-charcoal);
   --color-slate: var(--color-slate);
 
-  --font-sans: "futura-pt", sans-serif;
-  --font-serif: "futura-pt", sans-serif;
-  --font-futura: "futura-pt", sans-serif;
+  --font-sans: "Arizona Flare", sans-serif;
+  --font-serif: "Times", "Times New Roman", serif;
+  --font-futura: "Arizona Flare", sans-serif;
 }
 
 body {
