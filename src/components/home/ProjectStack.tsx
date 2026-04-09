@@ -42,11 +42,11 @@ export function ProjectStack({ projects }: { projects: ProjectData[] }) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-md flex flex-col gap-8 text-center md:text-left"
           >
-            <span className="font-serif text-4xl text-[#3A2A1F] leading-none mb-2">“</span>
-            <p className="font-sans text-lg md:text-xl text-[#3A2A1F] leading-relaxed font-medium">
-              Adam applies her keen eye for design to creating quietly joyful and glamorous yet welcoming interiors
+            <span className="font-serif text-4xl text-[#000000] leading-none mb-2">“</span>
+            <p className="font-sans text-lg md:text-xl text-[#000000] leading-relaxed font-medium">
+              Adam applies his keen eye for design to creating quietly joyful and glamorous yet welcoming interiors
             </p>
-            <span className="font-sans text-[9px] uppercase tracking-[0.25em] text-[#3A2A1F]/80 font-bold mt-4">
+            <span className="font-sans text-[9px] uppercase tracking-[0.25em] text-[#000000]/80 font-bold mt-4">
               House and Garden
             </span>
           </motion.div>

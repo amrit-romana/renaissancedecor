@@ -38,7 +38,7 @@ export function ProjectGrid() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </motion.div>
-            <div className="absolute inset-0 bg-[#3A2A1F]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-[#000000]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-8 left-8 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
               <h3 className="font-serif text-[var(--color-parchment)] text-xl md:text-2xl tracking-wide">{project.title}</h3>
               <p className="font-sans text-[var(--color-parchment)] text-[10px] tracking-[0.2em] font-light uppercase mt-2">Venetian Plaster</p>

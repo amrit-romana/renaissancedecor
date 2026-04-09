@@ -20,7 +20,7 @@ export function EnquirySection() {
         <FadeIn delay={0.4} direction="up">
           <Link 
             href="/enquire" 
-            className="mt-8 font-sans text-xs md:text-sm font-bold uppercase tracking-[0.2em] border border-[#3A2A1F] px-12 py-4 hover:bg-[#3A2A1F] hover:text-[var(--color-parchment)] transition-colors duration-500 block"
+            className="mt-8 font-sans text-xs md:text-sm font-bold uppercase tracking-[0.2em] border border-[#000000] px-12 py-4 hover:bg-[#000000] hover:text-[var(--color-parchment)] transition-colors duration-500 block"
           >
             Enquire
           </Link>

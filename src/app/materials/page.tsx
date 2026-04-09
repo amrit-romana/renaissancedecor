@@ -11,10 +11,10 @@ export default async function MaterialsPage() {
       <Header theme="dark" />
       
       <section className="pt-48 pb-12 px-6 md:px-12 w-full flex flex-col items-center">
-        <h1 className="font-futura font-light text-4xl md:text-5xl lg:text-6xl text-[#3A2A1F] tracking-widest uppercase mb-12">
+        <h1 className="font-futura font-light text-4xl md:text-5xl lg:text-6xl text-[#000000] tracking-widest uppercase mb-12">
           Finishes
         </h1>
-        <p className="font-futura text-sm md:text-base text-center max-w-2xl text-[#3A2A1F]/70 leading-relaxed mb-24 font-light">
+        <p className="font-futura text-sm md:text-base text-center max-w-2xl text-[#000000]/70 leading-relaxed mb-24 font-light">
           Choose from our extensive range of Finishes, or alternatively we can create custom finishes to suit your requirements. For bespoke finishes please contact us and provide images and details from which sample boards can be created.
         </p>
       </section>
@@ -38,7 +38,7 @@ export default async function MaterialsPage() {
                 />
               </div>
               <div className="flex flex-col text-center">
-                <span className="font-futura font-bold text-sm md:text-base text-[#3A2A1F] uppercase tracking-[0.2em]">
+                <span className="font-futura font-bold text-sm md:text-base text-[#000000] uppercase tracking-[0.2em]">
                   {finish.name}
                 </span>
               </div>
