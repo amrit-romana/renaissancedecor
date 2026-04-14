@@ -10,9 +10,11 @@ const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2500&auto=format&fit=crop",
 ];
 
-export function Hero() {
+export function Hero({ carouselItems = [] }: { carouselItems?: any[] }) {
   const ref = useRef(null);
   const [index, setIndex] = useState(0);
+  // Fallback to empty if not loaded yet, or default images if you prefer
+  const items = carouselItems.length > 0 ? carouselItems : [];
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -25,36 +27,38 @@ export function Hero() {
   // Autoplay Carousel
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % HERO_IMAGES.length);
-    }, 3000);
+      setIndex((prev) => (items.length > 0 ? (prev + 1) % items.length : 0));
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  const nextImage = () => setIndex((prev) => (prev + 1) % HERO_IMAGES.length);
-  const prevImage = () => setIndex((prev) => (prev - 1 + HERO_IMAGES.length) % HERO_IMAGES.length);
+  const nextImage = () => setIndex((prev) => (items.length > 0 ? (prev + 1) % items.length : 0));
+  const prevImage = () => setIndex((prev) => (items.length > 0 ? (prev - 1 + items.length) % items.length : 0));
 
   return (
     <section ref={ref} className="relative h-screen w-full overflow-hidden bg-[#000000] group">
       <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
         <AnimatePresence initial={false}>
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full"
-          >
-            <Image 
-              src={HERO_IMAGES[index]} 
-              alt="Renaissance Decor Plaster Surface" 
-              fill
-              priority={index === 0}
-              className="object-cover object-center"
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-[#000000]/30" />
-          </motion.div>
+          {items.length > 0 && (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <Image 
+                src={items[index].imageSrc} 
+                alt={items[index].title.replace(/<[^>]+>/g, '')} 
+                fill
+                priority={index === 0}
+                className="object-cover object-center"
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-[#000000]/30" />
+            </motion.div>
+          )}
         </AnimatePresence>
       </motion.div>
 
@@ -63,23 +67,26 @@ export function Hero() {
         style={{ opacity }}
         className="absolute inset-0 flex flex-col justify-end px-6 py-12 md:px-12 md:py-16 text-[var(--color-parchment)] z-10 pointer-events-none"
       >
-        <motion.h1 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 2.5 }}
-          className="font-serif text-4xl md:text-5xl lg:text-[64px] leading-[1.15] w-full max-w-4xl"
-          style={{ letterSpacing: '0.04em' }}
-        >
-          Twenty Years.<br/>Every surface applied by hand.
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2.8 }}
-          className="font-sans text-[10px] md:text-xs tracking-[0.2em] font-light uppercase mt-6 md:mt-8"
-        >
-          Venetian Plaster · Micro Cement · Clay · Metal
-        </motion.p>
+        {items.length > 0 && (
+          <>
+            <motion.h1 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, delay: 2.5 }}
+              className="font-serif text-4xl md:text-5xl lg:text-[64px] leading-[1.15] w-full max-w-4xl"
+              style={{ letterSpacing: '0.04em' }}
+              dangerouslySetInnerHTML={{ __html: items[index].title }}
+            />
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 2.8 }}
+              className="font-sans text-[10px] md:text-xs tracking-[0.2em] font-light uppercase mt-6 md:mt-8"
+            >
+              {items[index].subtitle}
+            </motion.p>
+          </>
+        )}
       </motion.div>
 
       {/* Carousel Controls */}

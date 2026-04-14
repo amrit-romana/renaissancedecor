@@ -3,8 +3,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export function Preloader() {
+  const pathname = usePathname();
   const [stage, setStage] = useState<0 | 1 | 2>(0);
 
   useEffect(() => {
@@ -15,6 +17,8 @@ export function Preloader() {
       clearTimeout(t2);
     };
   }, []);
+
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <AnimatePresence>
@@ -43,10 +47,10 @@ export function Preloader() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="relative w-36 h-36 md:w-56 md:h-56 mb-4 md:mb-6"
+              className="relative w-64 h-64 md:w-[36rem] md:h-[36rem] mb-4 md:mb-6"
             >
               <Image
-                src="/images/crest-white.png"
+                src="/images/preloader-logo-new.png"
                 alt="Renaissance Decor Emblem"
                 fill
                 className="object-contain"
@@ -54,16 +58,7 @@ export function Preloader() {
               />
             </motion.div>
             
-            <div className="overflow-hidden">
-              <motion.h1 
-                initial={{ y: "100%", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1.0, delay: 0.8, ease: [0.33, 1, 0.68, 1] }}
-                className="font-sans text-xs md:text-sm lg:text-base text-[var(--color-parchment)] tracking-[0.4em] md:tracking-[0.5em] uppercase font-bold text-center"
-              >
-                RENAISSANCE DECOR
-              </motion.h1>
-            </div>
+
           </motion.div>
         </motion.div>
       )}

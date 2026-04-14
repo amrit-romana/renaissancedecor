@@ -16,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/xvi4mxs.css" />
       </head>
-      <body className={`font-futura antialiased selection:bg-[var(--color-stone)] selection:text-[var(--color-charcoal)]`}>
+      <body suppressHydrationWarning className={`font-futura antialiased selection:bg-[var(--color-stone)] selection:text-[var(--color-charcoal)]`}>
         <SmoothScroll>
           <CustomCursor />
           <Preloader />

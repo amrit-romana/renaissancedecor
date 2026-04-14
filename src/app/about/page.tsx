@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="lg:col-span-5 flex flex-col gap-12">
           <FadeIn delay={0.1} direction="up" duration={1.2}>
             <h1 className="font-futura font-light text-5xl md:text-6xl text-[#000000] tracking-widest uppercase">
-              Who We Are
+              About Us
             </h1>
           </FadeIn>
           
@@ -78,7 +78,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7 flex flex-col gap-12 lg:pl-12">
             <FadeIn delay={0.2} direction="up" duration={1.2}>
               <h2 className="font-futura font-light text-4xl md:text-5xl tracking-widest uppercase">
-                About Adam
+                About Team
               </h2>
             </FadeIn>
             <FadeIn delay={0.3} direction="up">

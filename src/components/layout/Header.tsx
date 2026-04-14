@@ -3,20 +3,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { getDbData } from "@/actions/admin";
 
-const navLinks = [
-  { name: "Who We Are", href: "/about" },
+const defaultNavLinks = [
+  { name: "About Us", href: "/about" },
   { name: "Finishes", href: "/materials" },
   { name: "Projects", href: "/projects" },
-  { name: "Shop", href: "/shop" },
+  { name: "Products", href: "/shop" },
   { name: "Enquire", href: "/enquire" },
 ];
 
-export function Header({ theme = "light" }: { theme?: "light" | "dark" }) {
+export function Header({ theme = "light", navLinks: propNavLinks }: { theme?: "light" | "dark", navLinks?: any[] }) {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [localLinks, setLocalLinks] = useState(propNavLinks || defaultNavLinks);
+
+  // Fetch dynamic links on client when not provided via props (e.g. non-home pages)
+  useEffect(() => {
+    if (!propNavLinks) {
+      getDbData().then(db => {
+        if (db && db.navLinks && db.navLinks.length > 0) {
+          setLocalLinks(db.navLinks);
+        }
+      });
+    }
+  }, [propNavLinks]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -51,19 +64,19 @@ export function Header({ theme = "light" }: { theme?: "light" | "dark" }) {
       >
         <div className={`pointer-events-auto transition-colors duration-700 ${textColorClass} flex-shrink-0`}>
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-14 h-14 md:w-16 md:h-16">
+            <div className="relative w-96 h-20 md:w-[32rem] md:h-24">
               <Image
-                src="/images/crest-white.png"
-                alt="RD Crest Light"
+                src="/images/header-logo-initial.png"
+                alt="Renaissance Decor Initial Logo"
                 fill
-                className={`object-contain transition-opacity duration-700 ${textColorClass === "text-[var(--color-parchment)]" ? "opacity-100" : "opacity-0"}`}
+                className={`object-contain object-left transition-opacity duration-700 ${textColorClass === "text-[var(--color-parchment)]" ? "opacity-100" : "opacity-0"}`}
                 priority
               />
               <Image
-                src="/images/crest-dark.png"
-                alt="RD Crest Dark"
+                src="/images/header-logo-scroll.png"
+                alt="Renaissance Decor Scroll Logo"
                 fill
-                className={`object-contain transition-opacity duration-700 ${textColorClass === "text-[var(--color-charcoal)]" ? "opacity-100" : "opacity-0"}`}
+                className={`object-contain object-left transition-opacity duration-700 ${textColorClass === "text-[var(--color-charcoal)]" ? "opacity-100" : "opacity-0"}`}
                 priority
               />
             </div>
@@ -71,7 +84,7 @@ export function Header({ theme = "light" }: { theme?: "light" | "dark" }) {
         </div>
 
         <nav className={`hidden md:flex flex-row gap-6 lg:gap-8 pointer-events-auto items-center transition-colors duration-700 ${textColorClass}`}>
-          {navLinks.map((link) => (
+          {localLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -109,7 +122,7 @@ export function Header({ theme = "light" }: { theme?: "light" | "dark" }) {
             </button>
 
             <nav className="flex flex-col gap-8 items-center mt-12">
-              {navLinks.map((link, idx) => (
+              {localLinks.map((link, idx) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
