@@ -25,7 +25,7 @@ export default async function MaterialsPage() {
           {finishes.map((finish, idx) => (
             <Link
               key={finish.id}
-              href="/contact"
+              href={`/materials/${finish.id}`}
               className="group cursor-pointer flex flex-col gap-6"
             >
               <div className="relative w-full overflow-hidden bg-[var(--color-stone)] aspect-[4/5]">

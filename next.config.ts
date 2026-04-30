@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
         hostname: "renaissancedecor.com.au",
       },
     ],
+    // Allow locally uploaded images from public/uploads without optimization
+    localPatterns: [
+      { pathname: "/uploads/**" },
+      { pathname: "/images/**" },
+      { pathname: "/fonts/**" },
+    ],
   },
 };
 

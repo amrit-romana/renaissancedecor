@@ -1,30 +1,10 @@
 {
   "navLinks": [
-    {
-      "id": "1",
-      "name": "About Us",
-      "href": "/about"
-    },
-    {
-      "id": "2",
-      "name": "Finishes",
-      "href": "/materials"
-    },
-    {
-      "id": "3",
-      "name": "Projects",
-      "href": "/projects"
-    },
-    {
-      "id": "4",
-      "name": "Products",
-      "href": "/shop"
-    },
-    {
-      "id": "5",
-      "name": "Enquire",
-      "href": "/enquire"
-    }
+    { "id": "1", "name": "About Us", "href": "/about" },
+    { "id": "2", "name": "Finishes", "href": "/materials" },
+    { "id": "3", "name": "Projects", "href": "/projects" },
+    { "id": "4", "name": "Products", "href": "/shop" },
+    { "id": "5", "name": "Enquire", "href": "/enquire" }
   ],
   "carouselItems": [
     {
@@ -65,5 +45,32 @@
       "name": "Eleanor Vance",
       "title": "Design Director"
     }
-  ]
+  ],
+  "footerSettings": {
+    "address": "Unit 5 / 314 Governor Road,\nBraeside 3195",
+    "addressNote": "Showroom/Warehouse — Visits by appointment only",
+    "phone": "0468 326 303",
+    "openingHours": "9:00am — 5:00pm, Mon – Fri",
+    "abn": "ABN 70 890 172 250",
+    "director": {
+      "name": "Director – Adam McCann",
+      "email": "info@renaissancedecor.com.au"
+    },
+    "marketing": {
+      "name": "Marketing – Toni McCann",
+      "email": "office@renaissancedecor.com.au"
+    },
+    "socials": {
+      "instagram": "#",
+      "facebook": "#",
+      "pinterest": "#",
+      "tiktok": "#",
+      "linkedin": "#"
+    },
+    "copyrightName": "Renaissance Decor"
+  },
+  "siteSettings": {
+    "siteTitle": "Renaissance Decor | Master Artisans of Surface Design",
+    "metaDescription": "Bespoke Venetian Plaster, Micro Cement, and unique surface finishes. Based in Australia, executing internationally."
+  }
 }
